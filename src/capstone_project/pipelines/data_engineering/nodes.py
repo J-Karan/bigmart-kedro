@@ -2,7 +2,9 @@
 This is a boilerplate pipeline 'data_engineering'
 generated using Kedro 0.19.7
 """
+
 import pandas as pd
+
 
 def calculate_quantity_sold(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -14,6 +16,6 @@ def calculate_quantity_sold(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         pd.DataFrame: DataFrame with an additional 'Quantity_Sold' column.
     """
-    df['Quantity_Sold'] = df['Item_Outlet_Sales'] / df['Item_MRP']
-    df['Quantity_Sold'] = df['Quantity_Sold'].astype('int64')
+    df["Quantity_Sold"] = df["Item_Outlet_Sales"] / df["Item_MRP"]
+    df["Quantity_Sold"] = df["Quantity_Sold"].astype("int64")
     return df

@@ -103,6 +103,7 @@ def normalize_fat_content(df: pd.DataFrame) -> pd.DataFrame:
     )
     return df
 
+
 def pre_process_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     Applies a sequence of preprocessing steps to the DataFrame.
@@ -119,4 +120,3 @@ def pre_process_data(df: pd.DataFrame) -> pd.DataFrame:
     df = fill_visibility_with_mean(df)
     df = normalize_fat_content(df)
     return df
-

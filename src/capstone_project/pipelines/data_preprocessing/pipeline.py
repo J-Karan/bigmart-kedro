@@ -1,7 +1,5 @@
 from kedro.pipeline import Pipeline, node
-from .nodes import (
-    pre_process_data
-)
+from .nodes import pre_process_data
 
 
 def create_pipeline(**kwargs) -> Pipeline:
@@ -9,7 +7,7 @@ def create_pipeline(**kwargs) -> Pipeline:
         [
             node(
                 func=pre_process_data,
-                inputs= "mart",
+                inputs="mart",
                 outputs="final_preprocessed_data",
                 name="pre_processed_node",
             ),
